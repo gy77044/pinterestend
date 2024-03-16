@@ -1,12 +1,12 @@
 <% include ./partials/header.ejs %>
 <div class="w-full h-screen bg-zinc-300 flex items-center justify-center">
-  <div class="w-[20vw] bg-white px-5 py-10 rounded-[30px]">
+  <div class="w-[20vw] bg-white px-10 py-10 rounded-[30px]">
     <h1
-      class="text-3xl mb-5 font-semibold text-zinc-700 tracking-tighter capitalize leading-none text-center"
+      class="text-2xl mb-5 font-semibold text-zinc-700 tracking-tighter capitalize leading-none text-center"
     >
-      Welcome to pinterest.
+      Create New Account.
     </h1>
-    <form action="/login" method="post">
+    <form action="/register" method="post">
       <input
         name="username"
         type="text"
@@ -14,18 +14,28 @@
         placeholder="username"
       />
       <input
+        name="email"
+        type="email"
+        class="block border-2 rounded-md mt-2 w-full px-3 py-2"
+        placeholder="email"
+      />
+      <input
+        name="contact"
+        type="number"
+        class="block border-2 rounded-md mt-2 w-full px-3 py-2"
+        placeholder="contact"
+      />
+      <input
         name="password"
         type="password"
         class="block border-2 rounded-md mt-2 w-full px-3 py-2"
         placeholder="password"
       />
-      <a href="#" class="mt-2 inline-block font-semibold text-zinc-500">
-        Forgot Password</a
-      >
+
       <input
         type="submit"
         class="block border-2 rounded-full mt-2 w-full px-3 py-2 bg-red-600 text-white rounded-full"
-        value="Login"
+        value="Create New Account"
       />
       <p
         class="text-xs font-semibold text-zinc-700 mt-7 w-3/4 mx-auto text-center"
@@ -33,10 +43,10 @@
         Terms & Policies
       </p>
       <a
-        href="/register"
+        href="/"
         class="mt-7 inline-block font-semibold text-zinc-700 text-sm w-full text-center"
       >
-        Don't have an account?
+        Already have an account?
       </a>
     </form>
   </div>
